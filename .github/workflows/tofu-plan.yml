@@ -3,7 +3,7 @@ name: Tofu Plan
 on:
   pull_request:                                                             
     branches: ["main"]
-    paths: ["ch5/tofu/live/lambda-sample/**"]
+    paths: ["scripts/tofu/live/lambda-sample/**"]
 
 jobs:
   plan:
@@ -27,7 +27,7 @@ jobs:
 
       - name: tofu plan                                                     
         id: plan
-        working-directory: ch5/tofu/live/lambda-sample
+        working-directory: scripts/tofu/live/lambda-sample
         run: |
           tofu init -no-color -input=false
           tofu plan -no-color -input=false -lock=false
