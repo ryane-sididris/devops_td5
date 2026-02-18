@@ -28,3 +28,4 @@ module "gateway" {
   function_arn       = module.function.function_arn
   api_gateway_routes = ["GET /"]
 }
+# Relance du deploiement reel 
